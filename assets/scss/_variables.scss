@@ -1,0 +1,20 @@
+// Import the initial and derived variables
+@import "../bulma/sass/utilities/initial-variables.sass";
+
+// Import the fonts
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Raleway&display=swap');
+
+// Custom fonts
+$family-primary: 'Roboto', sans-serif;
+$family-secondary: 'Raleway', sans-serif;
+
+// Custom colors
+$primary: rgb(180, 29, 49);
+$dark: rgb(27, 27, 27);
+
+// Custom derived colors
+$link: $primary;
+
+// Set other variables
+$body-overflow-y: auto;
+$dimensions: 16 24 32 48 64 96 128 192 256;

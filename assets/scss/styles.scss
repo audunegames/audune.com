@@ -1,0 +1,92 @@
+// Import variables and fonts
+@import 'variables';
+@import 'bulma';
+
+// Footer styling
+.footer {
+  @extend .py-5;
+  @extend .has-background-light;
+}
+
+// Content styling
+.content {
+  // Heading styling
+  @for $i from 1 through 6
+  {
+    h#{$i} {
+      @extend .is-family-secondary;
+      @extend .has-text-weight-normal;
+
+      @if $i <= 2 {
+        @extend .has-text-primary;
+      }
+    }
+  }
+
+  // Link styling
+  a:not(.button) {
+    color: $link;
+    border-bottom: 1px $link dotted;
+
+    &:hover {
+      color: $link-dark;
+      border-bottom-color: $link-dark;
+    }
+
+    // Links in the footer have no border
+    .footer > & {
+      border-bottom: none;
+    }
+  }
+
+  // List styling
+  ul {
+    @extend .mx-0;
+    @extend .my-0;
+  }
+}
+
+// Navbar styling
+.navbar {
+  // Centered navbar start
+  .navbar-start {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  // Hovered navbar link
+  a:hover {
+    @extend .has-text-link-light;
+  }
+
+  // Navbar menu
+  .navbar-menu {
+    @extend .has-text-weight-bold;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.25);
+  }
+
+  // Floating navbar menu
+  .navbar-menu.is-active {
+    position: absolute;
+    width: 100%;
+  }
+}
+
+// Lead paragraph
+.is-lead {
+  @extend .is-size-5;
+  @extend .is-family-secondary;
+}
+
+// Header image modifier
+.is-header-image {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+// Background image modifier
+.has-background-image {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
