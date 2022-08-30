@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Raleway&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Raleway:wght@300;400&display=swap");
 /*! bulma.io v0.9.0 | MIT License | github.com/jgthms/bulma */
 @keyframes spinAround {
   from {
@@ -1748,7 +1748,7 @@ fieldset[disabled] .button {
   pointer-events: none;
 }
 
-.button.is-rounded {
+.button.is-rounded, .content .button {
   border-radius: 290486px;
   padding-left: calc(1em + 0.25em);
   padding-right: calc(1em + 0.25em);
@@ -2124,7 +2124,7 @@ fieldset[disabled] .button {
   width: 100%;
 }
 
-.image img.is-rounded {
+.image img.is-rounded, .image .content img.button, .content .image img.button {
   border-radius: 290486px;
 }
 
@@ -3037,7 +3037,7 @@ fieldset[disabled] .button {
   background-color: #dbdbdb;
 }
 
-.tag:not(body).is-rounded {
+.tag:not(body).is-rounded, .content .tag.button:not(body) {
   border-radius: 290486px;
 }
 
@@ -3387,7 +3387,7 @@ fieldset[disabled] .select select:-ms-input-placeholder,
   width: auto;
 }
 
-.input.is-rounded {
+.input.is-rounded, .content .input.button {
   border-radius: 290486px;
   padding-left: calc(calc(0.75em - 1px) + 0.375em);
   padding-right: calc(calc(0.75em - 1px) + 0.375em);
@@ -3465,7 +3465,7 @@ fieldset[disabled] .radio {
   z-index: 4;
 }
 
-.select.is-rounded select {
+.select.is-rounded select, .content .select.button select {
   border-radius: 290486px;
   padding-left: 1em;
 }
@@ -6355,14 +6355,15 @@ a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover, a.navbar-i
   font-size: 1.5rem;
 }
 
-.pagination.is-rounded .pagination-previous,
-.pagination.is-rounded .pagination-next {
+.pagination.is-rounded .pagination-previous, .content .pagination.button .pagination-previous,
+.pagination.is-rounded .pagination-next,
+.content .pagination.button .pagination-next {
   padding-left: 1em;
   padding-right: 1em;
   border-radius: 290486px;
 }
 
-.pagination.is-rounded .pagination-link {
+.pagination.is-rounded .pagination-link, .content .pagination.button .pagination-link {
   border-radius: 290486px;
 }
 
@@ -8813,15 +8814,15 @@ a.has-text-black:hover, a.has-text-black:focus {
   color: black !important;
 }
 
-.has-background-black {
+.has-background-black, .navbar a.navbar-item:hover, .navbar a.navbar-item:active {
   background-color: #0a0a0a !important;
 }
 
-.has-text-light {
+.has-text-light, .navbar .navbar-burger, .navbar a.navbar-item {
   color: whitesmoke !important;
 }
 
-a.has-text-light:hover, a.has-text-light:focus {
+a.has-text-light:hover, .navbar a.navbar-burger:hover, .navbar a.navbar-item:hover, a.has-text-light:focus, .navbar a.navbar-burger:focus, .navbar a.navbar-item:focus {
   color: #dbdbdb !important;
 }
 
@@ -8837,7 +8838,7 @@ a.has-text-dark:hover, a.has-text-dark:focus {
   color: #020202 !important;
 }
 
-.has-background-dark {
+.has-background-dark, .navbar .navbar-menu {
   background-color: #1b1b1b !important;
 }
 
@@ -8889,11 +8890,11 @@ a.has-text-link:hover, a.has-text-link:focus {
   background-color: #b41d31 !important;
 }
 
-.has-text-link-light, .navbar a:hover {
+.has-text-link-light, .navbar a.navbar-item:hover, .navbar a.navbar-item:active {
   color: #fcedef !important;
 }
 
-a.has-text-link-light:hover, .navbar a:hover, a.has-text-link-light:focus, .navbar a:focus:hover {
+a.has-text-link-light:hover, .navbar a.navbar-item:hover, a.has-text-link-light:focus, .navbar a.navbar-item:focus:hover, .navbar a.navbar-item:focus:active {
   color: #f5c2c8 !important;
 }
 
@@ -9943,7 +9944,7 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
   text-transform: lowercase !important;
 }
 
-.is-uppercase {
+.is-uppercase, .navbar a.navbar-item {
   text-transform: uppercase !important;
 }
 
@@ -9951,7 +9952,7 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
   font-style: italic !important;
 }
 
-.has-text-weight-light {
+.has-text-weight-light, .navbar a.navbar-item {
   font-weight: 300 !important;
 }
 
@@ -9967,7 +9968,7 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
   font-weight: 600 !important;
 }
 
-.has-text-weight-bold, .navbar .navbar-menu {
+.has-text-weight-bold {
   font-weight: 700 !important;
 }
 
@@ -9975,7 +9976,7 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
   font-family: "Roboto", sans-serif !important;
 }
 
-.is-family-secondary, .content h1, .content h2, .content h3, .content h4, .content h5, .content h6, .is-lead {
+.is-family-secondary, .content h1, .content h2, .content h3, .content h4, .content h5, .content h6, .navbar, .is-lead {
   font-family: "Raleway", sans-serif !important;
 }
 
@@ -11327,18 +11328,17 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
   border-bottom: none;
 }
 
+.content .button.is-fullwidth {
+  justify-content: flex-start;
+}
+
 .navbar .navbar-start {
   margin-left: auto;
   margin-right: auto;
 }
 
-.navbar .navbar-menu {
-  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.25);
-}
-
-.navbar .navbar-menu.is-active {
-  position: absolute;
-  width: 100%;
+.navbar a.navbar-item {
+  letter-spacing: 0.1rem;
 }
 
 .is-header-image {

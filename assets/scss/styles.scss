@@ -44,31 +44,49 @@
     @extend .mx-0;
     @extend .my-0;
   }
+
+  // Buttom styling
+  .button {
+    @extend .is-rounded;
+
+    &.is-fullwidth {
+      justify-content: flex-start;
+    }
+  }
 }
 
 // Navbar styling
 .navbar {
+  @extend .is-family-secondary;
+
   // Centered navbar start
   .navbar-start {
     margin-left: auto;
     margin-right: auto;
   }
 
-  // Hovered navbar link
-  a:hover {
-    @extend .has-text-link-light;
+  // Navbar burger
+  .navbar-burger {
+    @extend .has-text-light;
+  }
+
+  // Navbar link
+  a.navbar-item {
+    @extend .is-uppercase;
+    @extend .has-text-light;
+    @extend .has-text-weight-light;
+
+    letter-spacing: 0.1rem;
+
+    &:hover, &:active {
+      @extend .has-text-link-light;
+      @extend .has-background-black;
+    }
   }
 
   // Navbar menu
   .navbar-menu {
-    @extend .has-text-weight-bold;
-    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.25);
-  }
-
-  // Floating navbar menu
-  .navbar-menu.is-active {
-    position: absolute;
-    width: 100%;
+    @extend .has-background-dark;
   }
 }
 
