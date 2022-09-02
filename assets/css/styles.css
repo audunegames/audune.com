@@ -8862,7 +8862,7 @@ a.has-text-primary-light:hover, a.has-text-primary-light:focus {
   color: #f5c2c8 !important;
 }
 
-.has-background-primary-light {
+.has-background-primary-light, .card {
   background-color: #fcedef !important;
 }
 
@@ -9148,7 +9148,7 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
   border-radius: 0 !important;
 }
 
-.is-shadowless {
+.is-shadowless, .card {
   box-shadow: none !important;
 }
 

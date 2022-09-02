@@ -55,6 +55,12 @@
   }
 }
 
+// Card styling
+.card {
+  @extend .is-shadowless;
+  @extend .has-background-primary-light;
+}
+
 // Navbar styling
 .navbar {
   @extend .is-family-secondary;
