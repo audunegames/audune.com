@@ -1,0 +1,17 @@
+{
+  "name": "audune.com",
+  "version": "0.1.0",
+  "author": "Danae Dekker <info@danaedekker.com>",
+  "description": "The website for Audune Games, built with Bulma and Font Awesome",
+  "license": "GPL-3.0-or-later",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/audunegames/audune.com.git"
+  },
+  "homepage": "https://audune.com/",
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.2.1",
+    "bulma": "^0.9.4",
+    "jquery": "^3.6.3"
+  }
+}
