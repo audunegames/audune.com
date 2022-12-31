@@ -2,10 +2,24 @@
 @import 'variables';
 @import 'bulma';
 
+
+// Header styling
+header {
+  // Hero styling
+  &.hero {
+    @extend .has-background-dark;
+
+    background-image: url('../images/cover.png');
+    //background-color: $dark;
+    background-size: cover;
+    background-position: center;
+  }
+}
+
 // Footer styling
-.footer {
-  @extend .py-5;
+footer {
   @extend .has-background-light;
+  @extend .py-5;
 }
 
 // Content styling
@@ -28,9 +42,16 @@
     color: $link;
     border-bottom: 1px $link dotted;
 
+    transition: 0.1s ease-in-out;
+
+    &:active {
+      color: $link-active;
+      border-bottom-color: $link-active;
+    }
+
     &:hover {
-      color: $link-dark;
-      border-bottom-color: $link-dark;
+      color: $link-hover;
+      border-bottom-color: $link-hover;
     }
 
     // Links in the footer have no border

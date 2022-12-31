@@ -1,11 +1,21 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <!-- Meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Audune Games</title>
-    <link rel="stylesheet" href="assets/css/styles.css">
+    <meta name="description" content="We are Audune Games, an independent game studio based in The Netherlands, creating immersive narrative fantasy games.">
+    <meta name="keywords" content="audune, games, indie, studio, immersive, narrative, fantasy">
+
+    <!-- Shortcut icon -->
     <link rel="shortcut icon" href="assets/images/logo_circle.png">
+    <link rel="icon" type="image/png" href="assets/images/logo_circle.png" sizes="512x512">
+
+    <!-- Title -->
+    <title>Audune Games</title>
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="assets/css/styles.css">
 
     <!-- Scripts -->
     <script defer src="node_modules/jquery/dist/jquery.min.js"></script>
@@ -14,8 +24,8 @@
   </head>
 
   <body>
-    <!-- Main content -->
-    <section class="hero has-background-dark">
+    <!-- Header -->
+    <header class="hero">
       <div class="hero-body">
         <div class="container has-text-centered">
           <img class="image is-header-image" src="assets/images/logo.png">
@@ -47,14 +57,14 @@
           </div>
         </nav>
       </div>
-    </section>
+    </header>
 
     <!-- Lead -->
     <section class="section container content">
       <div class="columns is-centered">
-        <div class="column is-8">
+        <div class="column is-12 is-8-desktop">
           <p class="is-lead">
-            We are Audune Games, an independent game studio based in The Netherlands, and creating immersive narrative fantasy games.
+            We are Audune Games, an independent game studio based in The Netherlands, creating immersive narrative fantasy games.
           </p>
 
           <p>
@@ -71,7 +81,7 @@
     <!-- Games -->
     <section class="section container content">
       <div class="columns is-centered">
-        <div class="column is-8">
+        <div class="column is-12 is-8-desktop">
           <a name="our-games"></a>
           <h2 class="has-text-centered">Our games</h2>
 
@@ -119,7 +129,7 @@
     <!-- Game jams -->
     <section class="section container content">
       <div class="columns is-centered">
-        <div class="column is-8">
+        <div class="column is-12 is-8-desktop">
           <a name="game-jam-entries"></a>
           <h2 class="has-text-centered">Game jam entries</h2>
 
@@ -235,13 +245,14 @@
     <!-- Contact -->
     <section class="section container content">
       <div class="columns is-centered">
-        <div class="column is-8">
+        <div class="column is-12 is-8-desktop">
           <a name="get-in-touch"></a>
           <h2 class="has-text-centered">Get in touch</h2>
 
           <p>
-            If you wish to contact Audune Games, please send an email to <a href="mailto:info@audune.com">info@audune.com</a> or reach out to us on <a href="https://twitter.com/AuduneGames">Twitter</a> or <a href="https://facebook.com/AuduneGames">Facebook</a>, and we'll answer you as soon as possible! If you have any questions about one of our games or products, please contact <a href="mailto:support@audune.com">support@audune.com</a>.
+            If you wish to contact Audune Games, please <a data-mailto="aW5mb0BhdWR1bmUuY29t">send us an email</a> or reach out to us on <a href="https://twitter.com/AuduneGames">Twitter</a> or <a href="https://facebook.com/AuduneGames">Facebook</a>, and we'll answer you as soon as possible! If you have any questions about or need support for one of our games or products, please <a data-mailto="c3VwcG9ydEBhdWR1bmUuY29t">contact support</a>.
           </p>
+
           <p>
             You can also hop by at <a href="https://discord.gg/2bbEpTkPDG">Mae's Place</a>, our public Discord server, where we'll be happy to chat with you or give you support for our games.</a>
           </p>
@@ -252,46 +263,34 @@
     <!-- Footer -->
     <footer class="footer">
       <div class="container content">
-        <div class="columns is-centered is-vcentered">
-          <div class="column is-3">
-            <h3 class="is-size-5 has-text-weight-bold">Legal</h3>
-            <ul>
-              <li class="is-flex is-flex-align-items-center">
-                <span class="icon has-text-primary mr-1"><i class="fas fa-map-pin"></i></span>
-                <span>The Netherlands</span>
-              </li>
-              <li class="is-flex is-flex-align-items-center">
-                <span class="icon has-text-primary mr-1"><i class="fas fa-store-alt"></i></span>
-                <span>KVK: 80261426</span>
-              </li>
-              <li class="is-flex is-flex-align-items-center">
-                <span class="icon has-text-primary mr-1"><i class="fas fa-coins"></i></span>
-                <span>BTW: NL003413954B13</span>
-              </li>
-            </ul>
-          </div>
+        <div class="columns is-centered">
+          <div class="column is-12 is-8-desktop">
+            <div class="level">
+              <div class="level-left has-text-centered-mobile">
+                <img class="level-item image is-48x48" src="assets/images/logo_circle.png">
 
-          <div class="column is-2">
-            <h3 class="is-size-5 has-text-weight-bold">Socials</h3>
-            <ul>
-              <li class="is-flex is-flex-align-items-center">
-                <span class="icon has-text-primary mr-1"><i class="fab fa-twitter"></i></span>
-                <a href="https://twitter.com/AuduneGames">Twitter</a>
-              </li>
-              <li class="is-flex is-flex-align-items-center">
-                <span class="icon has-text-primary mr-1"><i class="fab fa-facebook"></i></span>
-                <a href="https://facebook.com/AuduneGames">Facebook</a>
-              </li>
-              <li class="is-flex is-flex-align-items-center">
-                <span class="icon has-text-primary mr-1"><i class="fab fa-discord"></i></span>
-                <a href="https://discord.gg/2bbEpTkPDG">Discord</a>
-              </li>
-            </ul>
-          </div>
+                <p class="level-item content is-block is-size-7">
+                  Copyright &copy; Audune Games, 2019&ndash;2023<br>
+                  The Netherlands &middot; KVK: 80261426 &middot; BTW: NL003413954B13
+                </p>
+              </div>
 
-          <div class="column is-3">
-            <p>Copyright &copy; Audune Games, 2019&ndash;2022.</p>
-            <p>This site was created using <a target="_blank" href="https://bulma.io/">Bulma</a> and <a target="_blank" href="https://fontawesome.com/">Font Awesome</a>.</p>
+              <div class="level-right">
+                <p class="level-item">
+                  <a class="icon is-medium mx-1" href="https://twitter.com/AuduneGames">
+                    <i class="fa-brands fa-twitter fa-2x" data-fa-transform="shrink-6" data-fa-mask="fas fa-circle"></i>
+                  </a>
+
+                  <a class="icon is-medium mx-1" href="https://facebook.com/AuduneGames">
+                    <i class="fa-brands fa-facebook-f fa-2x" data-fa-transform="shrink-3.5 down-1.6 right-1.25" data-fa-mask="fas fa-circle"></i>
+                  </a>
+
+                  <a class="icon is-medium mx-1" href="https://discord.gg/2bbEpTkPDG">
+                    <i class="fa-brands fa-discord fa-2x" data-fa-transform="shrink-7" data-fa-mask="fas fa-circle"></i>
+                  </a>
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
