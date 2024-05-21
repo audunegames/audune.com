@@ -10,7 +10,7 @@
   },
   "homepage": "https://audune.com/",
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^6.2.1",
+    "@fortawesome/fontawesome-free": "^6.5.2",
     "bulma": "^0.9.4",
     "jquery": "^3.6.3"
   }
