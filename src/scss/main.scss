@@ -1,16 +1,13 @@
-// Import variables and fonts
-@import 'variables';
-@import 'bulma';
+// Import the Bulma framework
+@use 'bulma';
 
 
 // Header styling
 header {
   // Hero styling
   &.hero {
-    @extend .has-background-dark;
-
-    background-image: url('../images/cover.png');
-    //background-color: $dark;
+    background-image: url('/assets/images/cover.png');
+    background-color: var(--bulma-dark);
     background-size: cover;
     background-position: center;
   }
@@ -18,8 +15,7 @@ header {
 
 // Footer styling
 footer {
-  @extend .has-background-light;
-  @extend .py-5;
+  background-color: var(--bulma-light);
 }
 
 // Content styling
@@ -28,30 +24,30 @@ footer {
   @for $i from 1 through 6
   {
     h#{$i} {
-      @extend .is-family-secondary;
-      @extend .has-text-weight-normal;
+      font-family: var(--bulma-family-secondary);
+      font-weight: var(--bulma-weight-normal);
 
       @if $i <= 2 {
-        @extend .has-text-primary;
+        color: var(--bulma-primary);
       }
     }
   }
 
   // Link styling
   a:not(.button) {
-    color: $link;
-    border-bottom: 1px $link dotted;
+    color: var(--bulma-link);
+    border-bottom: 1px var(--bulma-link) dotted;
 
     transition: 0.1s ease-in-out;
 
     &:active {
-      color: $link-active;
-      border-bottom-color: $link-active;
+      color: var(--bulma-link-dark);
+      border-bottom-color: var(--bulma-link-dark);
     }
 
     &:hover {
-      color: $link-hover;
-      border-bottom-color: $link-hover;
+      color: var(--bulma-link-dark);
+      border-bottom-color: var(--bulma-link-dark);
     }
 
     // Links in the footer have no border
@@ -62,13 +58,13 @@ footer {
 
   // List styling
   ul {
-    @extend .mx-0;
-    @extend .my-0;
+    margin: 0;
   }
 
   // Buttom styling
   .button {
-    @extend .is-rounded;
+    border-radius: var(--bulma-radius-rounded);
+    padding-inline-start: 1em;
 
     &.is-fullwidth {
       justify-content: flex-start;
@@ -78,13 +74,13 @@ footer {
 
 // Card styling
 .card {
-  @extend .is-shadowless;
-  @extend .has-background-primary-light;
+  background-color: var(--bulma-primary-light);
+  box-shadow: none !important;
 }
 
 // Navbar styling
 .navbar {
-  @extend .is-family-secondary;
+  font-family: var(--bulma-family-secondary);
 
   // Centered navbar start
   .navbar-start {
@@ -94,33 +90,33 @@ footer {
 
   // Navbar burger
   .navbar-burger {
-    @extend .has-text-light;
+    color: var(--bulma-light);
   }
 
   // Navbar link
   a.navbar-item {
-    @extend .is-uppercase;
-    @extend .has-text-light;
-    @extend .has-text-weight-light;
+    color: var(--bulma-light);
+    font-weight: var(--bulma-weight-light);
+    text-transform: uppercase;
 
     letter-spacing: 0.1rem;
 
     &:hover, &:active {
-      @extend .has-text-link-light;
-      @extend .has-background-black;
+      color: var(--bulma-link-light);
+      background-color: var(--bulma-black);
     }
   }
 
   // Navbar menu
   .navbar-menu {
-    @extend .has-background-dark;
+    background-color: var(--bulma-dark);
   }
 }
 
 // Lead paragraph
 .is-lead {
-  @extend .is-size-5;
-  @extend .is-family-secondary;
+  font-family: var(--bulma-family-secondary);
+  font-size: var(--bulma-size-5);
 }
 
 // Header image modifier

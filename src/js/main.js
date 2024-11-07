@@ -1,3 +1,9 @@
+const $ = require('jquery');
+
+// Import styles
+require('@fortawesome/fontawesome-free/js/all.js');
+
+
 // When the document is ready
 $(function()
 {
