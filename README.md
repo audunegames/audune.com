@@ -1,6 +1,6 @@
 # audune.com
 
-**This is the repository for the website of Audune Games.**
+**This is the repository for the website for Audune Games.**
 
 The site will be built using Gulp, which will bundle the source code using Browserify. After building, the static site can be served using a web server. The provided [Dockerfile](https://github.com/audunegames/audune.com/blob/master/Dockerfile) builds an image that bundles the site and serves it using nginx. 
 
