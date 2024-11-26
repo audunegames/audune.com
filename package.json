@@ -1,8 +1,8 @@
 {
   "name": "audune.com",
   "version": "0.1.0",
-  "author": "Danae Dekker <info@danaedekker.com>",
-  "description": "The website for Audune Games, built with Bulma and Font Awesome",
+  "author": "Danae Dekker <hello@danaedekker.com>",
+  "description": "The website for Audune Games",
   "license": "GPL-3.0-or-later",
   "browser": "src/js/main.js",
   "repository": {
@@ -11,9 +11,7 @@
   },
   "homepage": "https://audune.com/",
   "scripts": {
-    "build": "gulp build",
-    "postinstall": "gulp build",
-    "update": "git pull && npm install"
+    "build": "gulp build"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.6.0",
