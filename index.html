@@ -22,381 +22,84 @@
   </head>
 
   <body>
-    <!-- Header -->
-    <header class="hero">
-      <div class="hero-body">
-        <div class="container has-text-centered">
-          <img class="image is-header-image" src="assets/images/logo.png">
-        </div>
-      </div>
+    <!-- Navbar -->
+    <nav class="navbar is-dark" role="navigation">
+      <div class="container">
+        <div class="navbar-brand">
+          <a class="navbar-item" href="/" data-navigo>
+            <img class="image" src="/assets/images/logo_circle.png">
+            <span class="has-text-weight-bold">Audune</span>
+          </a>
 
-      <div class="hero-foot">
-        <nav class="navbar is-transparent" role="navigation">
-          <div class="navbar-brand">
-            <a role="button" class="navbar-burger" data-target="navbar-menu">
-              <span aria-hidden="true"></span>
-              <span aria-hidden="true"></span>
-              <span aria-hidden="true"></span>
+          <a role="button" class="navbar-burger" data-target="navbar-menu">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
+        </div>
+
+        <div id="navbar-menu" class="navbar-menu">
+          <div class="navbar-start">            
+            <a class="navbar-item" href="/games" data-navigo>Games</a>
+            <a class="navbar-item" href="/assets" data-navigo>Assets</a>
+            <a class="navbar-item" href="/contact" data-navigo>Contact</a>
+          </div>
+
+          <div class="navbar-end">
+            <a class="navbar-item px-3" href="https://store.steampowered.com/developer/audune">
+              <span class="icon">
+                <i class="fa-brands fa-steam fa-lg"></i>
+              </span>
+            </a>
+
+            <a class="navbar-item px-3" href="https://audune.itch.io/">
+              <span class="icon">
+                <i class="fa-brands fa-itch-io fa-lg"></i>
+              </span>
+            </a>
+
+            <a class="navbar-item px-3" href="https://bsky.app/profile/audune.com">
+              <span class="icon">
+                <i class="fa-brands fa-bluesky fa-lg"></i>
+              </span>
+            </a>
+
+            <a class="navbar-item px-3" href="https://discord.gg/2bbEpTkPDG">
+              <span class="icon">
+                <i class="fa-brands fa-discord fa-lg"></i>
+              </span>
+            </a>
+
+            <a class="navbar-item px-3" href="https://youtube.com/@audunegames">
+              <span class="icon">
+                <i class="fa-brands fa-youtube fa-lg"></i>
+              </span>
+            </a>
+
+            <a class="navbar-item px-3" href="https://github.com/audunegames">
+              <span class="icon">
+                <i class="fa-brands fa-github fa-lg"></i>
+              </span>
             </a>
           </div>
-
-          <div id="navbar-menu" class="navbar-menu">
-            <div class="navbar-start">
-              <a class="navbar-item" href="#our-games">
-                Games
-              </a>
-              <a class="navbar-item" href="#game-jam-entries">
-                Jams
-              </a>
-              <a class="navbar-item" href="#asset-packs">
-                Assets
-              </a>
-              <a class="navbar-item" href="#get-in-touch">
-                Contact
-              </a>
-            </div>
-          </div>
-        </nav>
-      </div>
-    </header>
-
-    <!-- Lead -->
-    <section class="section container content">
-      <div class="columns is-centered">
-        <div class="column is-12 is-8-desktop">
-          <p class="is-lead">
-            We are Audune Games, an independent game studio based in The Netherlands, creating immersive narrative fantasy games.
-          </p>
-
-          <p>
-            Founded and led by <a href="https://danaedekker.com/">Danae Dekker</a>, a game audio designer with a wish to make her dream a reality, Audune Games tries to combine intruiging and cute stories, unusual fantasy worlds, and the most whimsical game music into an immersive narrative experience.
-          </p>
-
-          <p>
-            Our first big project has been <a target="_blank" href="https://invisiblewingsgame.com/">Invisible Wings: Chapter One</a>, a visual novel set in a modern fantasy world where faeries and humans were supposed to live together. This proof of concept tells about Dawn and her quest of accepting her faerie heritage. The game was released for free in 2021 at <a target="_blank" href="https://store.steampowered.com/app/1419380/Invisible_Wings/">Steam</a> and <a target="_blank" href="https://audune.itch.io/invisiblewings">Itch.io</a>, and the definitive patch, containing an all-new soundtrack, was relesed in early 2023.
-          </p>
-
-          <p>
-            To deliver the most perfect experience, Audune outsources many of its team roles during development. In the past we have worked with several awesome talented people around the world, including artists as <a target="_blank" href="https://twitter.com/Maricu_Mana">Maricu Mana</a>, <a target="_blank" href="https://flairiart.carrd.co/">Flairi</a> and <a target="_blank" href="https://twitter.com/RunicPixels">RunicPixels</a>, and voice actors such as <a target="_blank" href="https://katherinetole.com/">Katherine Tole</a> and <a target="_blank" href="https://jessicaspencer.work/">Jessica Spencer</a>.
-          </p>
         </div>
       </div>
-    </section>
+    </nav>
 
-    <!-- Games -->
-    <section class="section container content">
-      <div class="columns is-centered">
-        <div class="column is-12 is-8-desktop">
-          <a name="our-games"></a>
-          <h2 class="has-text-centered">Our games</h2>
-
-          <p>
-            Take a look at the games we're currently working on or have worked on in the past!
-          </p>
-
-          <div class="columns is-multiline">
-            <div class="column is-full">
-              <div class="card">
-                <div class="card-image">
-                  <figure class="image is-16by9 mx-0">
-                    <iframe class="has-ratio" src="https://www.youtube.com/embed/IbGgyq8-2xk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                  </figure>
-                </div>
-
-                <div class="card-content">
-                  <h3>Invisible Wings: Chapter One</h3>
-
-                  <p>
-                     A visual novel set in a dystopian fantasy world, where you're helping Dawn, a young woman of faerie descent, with her first steps into loving and accepting who she is in a modern world where faeries and humans were supposed to live in harmony. The game is available for free on Steam and Itch.io and the soundtrack is available on Steam, Bandcamp and major streaming platforms.
-                  </p>
-
-                  <div class="buttons">
-                    <a class="button is-primary is-fullwidth" href="https://invisiblewingsgame.com/">
-                      <span class="icon"><i class="fa-solid fa-globe"></i></span>
-                      <span>Visit website</span>
-                    </a>
-                    <a class="button is-primary is-fullwidth" href="https://store.steampowered.com/app/1419380/Invisible_Wings/">
-                      <span class="icon"><i class="fa-brands fa-steam"></i></span>
-                      <span>Download at Steam</span>
-                    </a>
-                    <a class="button is-primary is-fullwidth" href="https://audune.itch.io/invisiblewings">
-                      <span class="icon"><i class="fa-brands fa-itch-io"></i></span>
-                      <span>Download at Itch.io</span>
-                    </a>
-                    <a class="button is-primary is-fullwidth" href="https://danaedekker.bandcamp.com/album/invisible-wings-chapter-one-original-game-soundtrack">
-                      <span class="icon"><i class="fa-brands fa-bandcamp"></i></span>
-                      <span>Download soundtrack</span>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Jams -->
-    <section class="section container content">
-      <div class="columns is-centered">
-        <div class="column is-12 is-8-desktop">
-          <a name="game-jam-entries"></a>
-          <h2 class="has-text-centered">Game jam entries</h2>
-
-          <p>
-            We love to participate in game jams and help out fellow game developers with coding, audio design and narrative design. Check out our favorite entries below!
-          </p>
-
-          <div class="columns is-multiline">
-            <div class="column is-half">
-              <div class="card">
-                <div class="card-image">
-                  <figure class="image is-16by9 mx-0">
-                    <iframe class="has-ratio" src="https://www.youtube.com/embed/czFwxPxQxyU" frameborder="0" allow="autoplay" scrolling="no"></iframe>
-                  </figure>
-                </div>
-
-                <div class="card-content">
-                  <h3>Roots of Skye</h3>
-
-                  <p>
-                    Made for GGJ 2023 together with <a href="https://arzi.itch.io/">Arto Koistinen</a>, <a href="https://daninekai.itch.io/">Auroranekai</a>, <a href="https://flashkirby.itch.io/">Flashkirby</a> and <a href="https://runicpixels.itch.io/">RunicPixels</a>. Play as a viking elf girl who wants to learn more about her forgotten ancestors and decides to sail towards the Skye tree and climb it to discover its secrets and learn about her past.
-                  </p>
-
-                  <div class="buttons">
-                    <a class="button is-primary is-rounded is-fullwidth" href="https://runicpixels.itch.io/roots-of-skye">
-                      <span class="icon"><i class="fa-brands fa-itch-io"></i></span>
-                      <span>Play in browser at Itch.io</span>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="column is-half">
-              <div class="card">
-                <div class="card-image">
-                  <figure class="image is-16by9 mx-0">
-                    <iframe class="has-ratio" src="https://www.youtube.com/embed/8Gt_u-zDUNg" frameborder="0" allow="autoplay" scrolling="no"></iframe>
-                  </figure>
-                </div>
-
-                <div class="card-content">
-                  <h3>Warden of the Woods</h3>
-
-                  <p>
-                    Made for Ludum Dare 52 together with <a href="https://arzi.itch.io/">Arto Koistinen</a>, <a href="https://twitter.com/Nekkohime">Nekkohime</a>, <a href="https://twitter.com/RumbootsArt">RumbootsArt</a> and <a href="https://runicpixels.itch.io/">RunicPixels</a>. You're the newly appointed guardian of the Fairy Forest! It's the easiest job in the world! Absolutely nothing can go wrong! Or so they say...
-                  </p>
-
-                  <div class="buttons">
-                    <a class="button is-primary is-rounded is-fullwidth" href="https://arzi.itch.io/ld52">
-                      <span class="icon"><i class="fa-brands fa-itch-io"></i></span>
-                      <span>Play in browser at Itch.io</span>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="column is-half">
-              <div class="card">
-                <div class="card-image">
-                  <figure class="image is-16by9 mx-0">
-                    <iframe class="has-ratio" src="https://www.youtube.com/embed/NbBPjZCHw-s" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                  </figure>
-                </div>
-
-                <div class="card-content">
-                  <h3>Sakura Shrine</h3>
-
-                  <p>
-                    Made for Ludum Dare 50 together with <a href="https://arzi.itch.io/">Arto Koistinen</a> and <a href="https://runicpixels.itch.io/">RunicPixels</a>. A narrative tower defence-like game about a priestess protecting the sacred sakura tree from demons. Awarded 50th place in art and 32nd place in audio.
-                  </p>
-
-                  <div class="buttons">
-                    <a class="button is-primary is-rounded is-fullwidth" href="https://arzi.itch.io/ld50">
-                      <span class="icon"><i class="fa-brands fa-itch-io"></i></span>
-                      <span>Play in browser at Itch.io</span>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="column is-half">
-              <div class="card">
-                <div class="card-image">
-                  <figure class="image is-16by9 mx-0">
-                    <iframe class="has-ratio" src="https://www.youtube.com/embed/LeJqDQb6q6E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                  </figure>
-                </div>
-
-                <div class="card-content">
-                  <h3>Cathens</h3>
-
-                  <p>
-                    Made for GGJ 2022 together with <a href="https://coolcast.itch.io/">CoolCast</a>. Discover the duality between being either a chonky buff cat or a agile mage cat in the streets of ancient Greece. Awarded 5th place in art and 4th place in audio of all Dutch entries.
-                  </p>
-
-                  <div class="buttons">
-                    <a class="button is-primary is-rounded is-fullwidth" href="https://runicpixels.itch.io/cathens">
-                      <span class="icon"><i class="fa-brands fa-itch-io"></i></span>
-                      <span>Download at Itch.io</span>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="column is-half">
-              <div class="card">
-                <div class="card-image">
-                  <figure class="image is-16by9 mx-0">
-                    <iframe class="has-ratio" src="https://www.youtube.com/embed/Y21QE7zzHJg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                  </figure>
-                </div>
-
-                <div class="card-content">
-                  <h3>Fairy Lost</h3>
-
-                  <p>
-                    Made for GGJ 2021 together with <a href="https://coolcast.itch.io/">CoolCast</a>. A game about exploring a mysterious magical forest as a lost fairy on her way back home. Awarded 2nd place overall, 1st place in art and 2nd place in audio of all Dutch entries.
-                  </p>
-
-                  <div class="buttons">
-                    <a class="button is-primary is-rounded is-fullwidth" href="https://coolcast.itch.io/fairy-lost">
-                      <span class="icon"><i class="fa-brands fa-itch-io"></i></span>
-                      <span>Download at Itch.io</span>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="column is-half">
-              <div class="card">
-                <div class="card-image">
-                  <figure class="image is-16by9 mx-0">
-                    <iframe class="has-ratio" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/905663422&color=%23b41d31&auto_play=false&hide_related=false&show_comments=false&show_user=true&show_reposts=false&show_teaser=false&visual=true" frameborder="0" allow="autoplay" scrolling="no"></iframe>
-                  </figure>
-                </div>
-
-                <div class="card-content">
-                  <h3>Hope/Remember</h3>
-
-                  <p>
-                    Made for Ludum Dare 47 together with <a href="https://arzi.itch.io/">Arto Koistinen</a>. An adventure about the week of Halloween, where you don't have a date for the school's party on Saturday! Unfortunately, there's is also another threat looming in the horizon.
-                  </p>
-
-                  <div class="buttons">
-                    <a class="button is-primary is-rounded is-fullwidth" href="https://arzi.itch.io/hoperemember">
-                      <span class="icon"><i class="fa-brands fa-itch-io"></i></span>
-                      <span>Play in browser at Itch.io</span>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Game jams -->
-    <section class="section container content">
-      <div class="columns is-centered">
-        <div class="column is-12 is-8-desktop">
-          <a name="asset-packs"></a>
-          <h2 class="has-text-centered">Asset packs</h2>
-
-          <p>
-            Games often need common assets, and we're excited to share the assets we've made with our fellow game developers. Check out this section for assets you can use in your own projects. Sharing is caring!
-          </p>
-
-          <div class="columns is-multiline">
-            <div class="column is-half">
-              <div class="card">
-                <div class="card-image">
-                  <figure class="image is-16by9 mx-0">
-                    <img class="has-ratio" src="assets/images/cover-audune-prompts.png">
-                  </figure>
-                </div>
-
-                <div class="card-content">
-                  <h3>Audune Prompts</h3>
-
-                  <p>
-                    Free to use button prompts for keyboard, mouse and modern controllers, which were made with a minimal yet clear design in mind. The prompts are licensed under the CC BY-SA 4.0 license.
-                  </p>
-
-                  <div class="buttons">
-                    <a class="button is-primary is-rounded is-fullwidth" href="https://audune.itch.io/audune-prompts">
-                      <span class="icon"><i class="fa-brands fa-itch-io"></i></span>
-                      <span>Download at Itch.io</span>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact -->
-    <section class="section container content">
-      <div class="columns is-centered">
-        <div class="column is-12 is-8-desktop">
-          <a name="get-in-touch"></a>
-          <h2 class="has-text-centered">Get in touch</h2>
-
-          <p>
-            If you wish to contact Audune Games, please <a data-mailto="aW5mb0BhdWR1bmUuY29t">send us an email</a> or reach out to us on <a href="https://bsky.app/profile/audune.com">Bluesky</a> or <a href="https://www.linkedin.com/company/75516570/">LinkedIn</a>, and we'll answer you as soon as possible! If you have any questions about or need support for one of our games or products, please <a data-mailto="c3VwcG9ydEBhdWR1bmUuY29t">contact support</a>.
-          </p>
-
-          <p>
-            You can also hop by at the <a href="https://discord.gg/2bbEpTkPDG">Audune Community</a> on Discord, where we'll be happy to chat with you or give you support for our games.</a>
-          </p>
-        </div>
-      </div>
-    </section>
+    <!-- Main -->
+    <main id="view" style="min-height: calc(100vh - 96px - var(--bulma-navbar-height));"></main>
 
     <!-- Footer -->
     <footer class="footer">
       <div class="container content">
-        <div class="columns is-centered">
-          <div class="column is-12 is-8-desktop">
-            <div class="level">
-              <div class="level-left has-text-centered-mobile">
-                <img class="level-item image is-48x48" src="assets/images/logo_circle.png">
+        <div class="is-flex is-justify-content-center is-align-items-center">
+          <img class="image is-48x48 mr-4" src="/assets/images/logo_circle.png">
 
-                <p class="level-item content is-block is-size-7">
-                  Copyright &copy; Audune Games, 2019&ndash;2025<br>
-                  The Netherlands &middot; KVK: 80261426 &middot; BTW: NL003413954B13
-                </p>
-              </div>
-
-              <div class="level-right">
-                <p class="level-item">
-                  <a class="icon is-medium mx-1" href="https://audune.itch.io/">
-                    <i class="fa-brands fa-itch-io fa-2x" data-fa-transform="shrink-6" data-fa-mask="fa-solid fa-circle"></i>
-                  </a>
-
-                  <a class="icon is-medium mx-1" href="https://bsky.app/profile/audune.com">
-                    <i class="fa-brands fa-bluesky fa-2x" data-fa-transform="shrink-8 down-0.25" data-fa-mask="fa-solid fa-circle"></i>
-                  </a>
-
-                  <a class="icon is-medium mx-1" href="https://www.linkedin.com/company/75516570/">
-                    <i class="fa-brands fa-linkedin-in fa-2x" data-fa-transform="shrink-6" data-fa-mask="fa-solid fa-circle"></i>
-                  </a>
-
-                  <a class="icon is-medium mx-1" href="https://discord.gg/2bbEpTkPDG">
-                    <i class="fa-brands fa-discord fa-2x" data-fa-transform="shrink-7" data-fa-mask="fa-solid fa-circle"></i>
-                  </a>
-                </p>
-              </div>
-            </div>
-          </div>
+          <p class="content is-block is-size-7">
+            &copy; 2019&ndash;2025 Audune Games. All rights reserved.<br>
+            The Netherlands <span class="mx-1">&middot;</span> KVK: 80261426 <span class="mx-1">&middot;</span> BTW: NL003413954B13
+          </p>
         </div>
       </div>
     </footer>

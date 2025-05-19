@@ -1,0 +1,32 @@
+// Custom fonts and colors
+$font-text: "Roboto", sans-serif;
+$font-heading: "Raleway", sans-serif;
+$color-blue: rgb(85, 177, 219);
+$color-red: rgb(180, 29, 49);
+$color-dark: rgb(27, 27, 27);
+
+// Import the Bulma framework
+@use 'bulma/sass' with (
+  // Custom fonts and colors
+  $family-primary: $font-text,
+  $family-secondary: $font-heading,
+  $primary: $color-blue,
+  $dark: $color-dark,
+  $link: $color-blue,
+
+  // Other variables
+  $body-overflow-y: auto,
+  $dimensions: 16 24 32 48 64 96 128 192 256,
+  $navbar-height: 4rem,
+  $navbar-item-img-max-height: 2.5rem,
+  $navbar-burger-color: var(--bulma-light),
+  $footer-background-color: var(--bulma-dark),
+  $footer-color: var(--bulma-white),
+  $footer-padding: 1.5rem,
+  $section-padding: 3rem 1.5rem,
+  $section-padding-desktop: 3rem 1.5rem,
+  $card-content-padding: 1.25rem,
+);
+
+// Import the fonts
+@import 'https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Raleway:wght@300;400&display=swap';

@@ -2,20 +2,33 @@
 @use 'bulma';
 
 
+// Navbar styling
+.navbar {
+  font-family: var(--bulma-family-secondary);
+
+  // Centered navbar start
+  .navbar-brand, .navbar-start, .navbar-end {
+    // Navbar link
+    & > .navbar-item, & > .navbar-item > .navbar-link {
+      text-transform: uppercase;
+      letter-spacing: 0.1rem;
+
+      // Hovered navbar link
+      &:hover, &:active {
+        color: var(--bulma-link);
+      }
+    }
+  }
+}
+
 // Header styling
-header {
+.header {
   // Hero styling
   &.hero {
-    background-image: url('/assets/images/cover.png');
     background-color: var(--bulma-dark);
     background-size: cover;
     background-position: center;
   }
-}
-
-// Footer styling
-footer {
-  background-color: var(--bulma-light);
 }
 
 // Content styling
@@ -28,7 +41,7 @@ footer {
       font-weight: var(--bulma-weight-normal);
 
       @if $i <= 2 {
-        color: var(--bulma-primary);
+        color: var(--bulma-primary-bold);
       }
     }
   }
@@ -42,16 +55,21 @@ footer {
 
     &:active {
       color: var(--bulma-link-dark);
-      border-bottom-color: var(--bulma-link-dark);
+      border-bottom-color: var(--bulma-link-bold);
     }
 
     &:hover {
       color: var(--bulma-link-dark);
-      border-bottom-color: var(--bulma-link-dark);
+      border-bottom-color: var(--bulma-link-bold);
     }
 
     // Links in the footer have no border
     .footer > & {
+      border-bottom: none;
+    }
+
+    // Icon links have no border
+    &.icon, &:has(.icon), &:has(.tag) {
       border-bottom: none;
     }
   }
@@ -59,9 +77,11 @@ footer {
   // List styling
   ul {
     margin: 0;
+    margin-left: 1rem;
+    list-style-type: square;
   }
 
-  // Buttom styling
+  // Button styling
   .button {
     border-radius: var(--bulma-radius-rounded);
     padding-inline-start: 1em;
@@ -70,59 +90,63 @@ footer {
       justify-content: flex-start;
     }
   }
-}
 
-// Card styling
-.card {
-  background-color: var(--bulma-primary-light);
-  box-shadow: none !important;
-}
-
-// Navbar styling
-.navbar {
-  font-family: var(--bulma-family-secondary);
-
-  // Centered navbar start
-  .navbar-start {
-    margin-left: auto;
-    margin-right: auto;
+  // Media styling
+  .media {
+    margin-bottom: 0;
   }
 
-  // Navbar burger
-  .navbar-burger {
-    color: var(--bulma-light);
-  }
+  // Cell styling
+  .cell {
+    margin-bottom: 0;
 
-  // Navbar link
-  a.navbar-item {
-    color: var(--bulma-light);
-    font-weight: var(--bulma-weight-light);
-    text-transform: uppercase;
+    &.is-contact-cell {
+      margin-top: 0.5rem;
+      margin-bottom: 0.5rem;
 
-    letter-spacing: 0.1rem;
-
-    &:hover, &:active {
-      color: var(--bulma-link-light);
-      background-color: var(--bulma-black);
+      text-align: center;
     }
   }
-
-  // Navbar menu
-  .navbar-menu {
-    background-color: var(--bulma-dark);
-  }
 }
 
-// Lead paragraph
+
+// Centered content
+.is-centered {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+// Lead text
 .is-lead {
   font-family: var(--bulma-family-secondary);
   font-size: var(--bulma-size-5);
 }
 
+// Emphasized text
+.is-emphasized {
+  color: var(--bulma-primary);
+  font-weight: bold;
+}
+
 // Header image modifier
 .is-header-image {
+  max-height: 320px;
   margin-left: auto;
   margin-right: auto;
+}
+
+// Large header image modifier
+.is-header-image-large {
+  max-height: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+// Contact icon
+.is-contact-icon {
+  width: 4rem;
+  height: 4rem;
+  margin-bottom: 0 !important;
 }
 
 // Background image modifier
@@ -130,4 +154,30 @@ footer {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+
+// Invisible Wings specific styling
+.invisible-wings {
+  // Top hero border modifier
+  .has-hero-border-top:before, .has-hero-border:before {
+    content: " ";
+    display: block;
+    width: 100%;
+    height: 30px;
+
+    background-image: url('/assets/images/games/invisible-wings/hero-border-top.png');
+    background-position: center;
+  }
+
+  // Bottom hero border modifier
+  .has-hero-border-bottom:after, .has-hero-border:after {
+    content: " ";
+    display: block;
+    width: 100%;
+    height: 30px;
+
+    background-image: url('/assets/images/games/invisible-wings/hero-border-bottom.png');
+    background-position: center;
+  }
 }

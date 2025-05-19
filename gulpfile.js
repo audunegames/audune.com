@@ -44,6 +44,7 @@ async function scripts() {
 async function dev() {
   gulp.watch('src/scss/**.scss', styles);
   gulp.watch('src/js/**.js', scripts);
+  gulp.watch('src/templates/**.html', scripts);
 
   return gulp.src('.')
     .pipe(webserver({fallback: 'index.html', livereload: true}))
