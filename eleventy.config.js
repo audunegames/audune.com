@@ -51,8 +51,7 @@ export default async function (eleventyConfig) {
 	eleventyConfig.setLayoutsDirectory("_layouts");
 
 	// Add passthrough copies
-	eleventyConfig.addPassthroughCopy({"assets": "assets"});
-	eleventyConfig.addPassthroughCopy({"node_modules/@fortawesome/fontawesome-free/webfonts": "webfonts"});
+	eleventyConfig.addPassthroughCopy("assets");
 
 	// Add custom template handling
 	eleventyConfig.addExtension("scss", { outputFileExtension: "css", useLayouts: false, compile: compileSCSS });
