@@ -1,35 +1,25 @@
 {
+  "type": "module",
   "name": "audune.com",
   "version": "0.1.0",
   "author": "Danae Dekker <hello@danaedekker.com>",
   "description": "The website for Audune Games",
   "license": "GPL-3.0-or-later",
-  "browser": "src/js/main.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/audunegames/audune.com.git"
   },
   "homepage": "https://audune.com/",
   "scripts": {
-    "build": "gulp build"
+    "build": "npx @11ty/eleventy",
+    "dev": "npx @11ty/eleventy --serve"
   },
   "dependencies": {
+    "@11ty/eleventy": "~3.1.2",
     "@fortawesome/fontawesome-free": "^6.6.0",
-    "brfs": "~2.0.2",
-    "browserify": "~17.0.1",
     "bulma": "~1.0.2",
-    "gulp": "~4.0.2",
-    "gulp-rename": "~2.0.0",
-    "gulp-sass": "~5.1.0",
-    "gulp-sourcemaps": "~3.0.0",
-    "gulp-uglify": "~3.0.2",
+    "esbuild": "~0.25.9",
     "jquery": "~3.7.1",
-    "navigo": "~8.11.1",
-    "sass": "~1.80.6",
-    "vinyl-buffer": "~1.0.1",
-    "vinyl-source-stream": "~2.0.0"
-  },
-  "devDependencies": {
-    "gulp-webserver": "^0.9.1"
+    "sass": "~1.80.6"
   }
 }

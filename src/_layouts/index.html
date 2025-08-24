@@ -23,13 +23,14 @@
     <link rel="icon" type="image/png" href="/assets/images/logo_circle.png" sizes="512x512">
 
     <!-- Title -->
-    <title>Audune Games</title>
+    {% set site_title = "Audune Games" %}
+    <title>{{ (title + " | " + site_title) if title else site_title }}</title>
 
     <!-- Styles -->
-    <link rel="stylesheet" href="/dist/css/bundle.css">
+    <link rel="stylesheet" href="/css/index.css">
 
     <!-- Scripts -->
-    <script src="/dist/js/bundle.js"></script>
+    <script src="/js/index.js"></script>
   </head>
 
   <body>
@@ -99,7 +100,9 @@
     </nav>
 
     <!-- Main -->
-    <main id="view" style="min-height: calc(100vh - 96px - var(--bulma-navbar-height));"></main>
+    <main id="view" style="min-height: calc(100vh - 96px - var(--bulma-navbar-height));">
+      {{ content | safe }}
+    </main>
 
     <!-- Footer -->
     <footer class="footer">
