@@ -3,16 +3,16 @@ $font-text: "Roboto", sans-serif;
 $font-heading: "Raleway", sans-serif;
 $color-blue: rgb(85, 177, 219);
 $color-red: rgb(180, 29, 49);
-$color-dark: rgb(27, 27, 27);
+$color-dark: rgb(25, 25, 25);
 
 // Import the Bulma framework
 @use 'bulma/sass' with (
   // Custom fonts and colors
   $family-primary: $font-text,
   $family-secondary: $font-heading,
-  $primary: $color-blue,
+  $primary: $color-red,
   $dark: $color-dark,
-  $link: $color-blue,
+  $link: $color-red,
 
   // Other variables
   $body-overflow-y: auto,

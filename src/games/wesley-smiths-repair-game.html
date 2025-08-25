@@ -1,7 +1,17 @@
 ---
-title: Wesley Smith's Repair Game
-layout: index.html
+title: "Wesley Smith's Repair Game"
+layout: base.html
+
+embed: "-3a6ZsoHoGc"
+screenshots:
+- "/assets/images/games/wesley-smiths-repair-game/screenshot-01.png"
+- "/assets/images/games/wesley-smiths-repair-game/screenshot-02.png"
+- "/assets/images/games/wesley-smiths-repair-game/screenshot-03.png"
+- "/assets/images/games/wesley-smiths-repair-game/screenshot-04.png"
 ---
+
+{% import "utils.html" as utils %}
+{% set game = games.wesley_smiths_repair_game %}
 
 <div class="wesley-smiths-repair-game">
   <!-- Header -->
@@ -16,64 +26,28 @@ layout: index.html
   <!-- Content -->
   <section class="section container content">
     <div class="columns is-centered">
-      <div class="column is-12 is-8-desktop"> 
-        <p class="is-lead has-text-centered">Help Wesley Smith to collect items, craft weapons and defeat his opponents in this frustratingly funny arcade game. Compete against the merciless bots or up to three friends in couch co-op mode to become the master blacksmith! </p>
+      <div class="column is-12 is-8-desktop">        
+        <p class="is-lead has-text-centered">
+          Help Wesley Smith to collect items, craft weapons and defeat his opponents in this frustratingly funny arcade game. Compete against the merciless bots or up to three friends in couch co-op mode to become the master blacksmith!
+        </p>
 
-        <div class="buttons is-centered is-family-secondary my-5">
-          <a class="button is-primary is-medium" href="https://store.steampowered.com/app/2480840/Wesley_Smiths_Repair_Game/">
-            <span class="icon mr-2">
-              <i class="fa-brands fa-steam"></i>
-            </span>
-            Play on Steam
-          </a>
-
-          <a class="button is-primary is-medium" href="https://audune.itch.io/wesleysmithsrepairgame">
-            <span class="icon mr-2">
-              <i class="fa-brands fa-itch-io"></i>
-            </span>
-            Play on Itch.io
-          </a>
-        </div>
+        {{ utils.linkButtons(game.links, containerClasses = "my-5", buttonClasses = "is-medium is-family-secondary") }}
 
         <div class="fixed-grid has-2-cols mt-6">
           <div class="grid">
             <div class="cell is-col-span-2">
-              <figure class="image is-16by9">
-                <iframe class="box p-0 has-ratio" src="https://www.youtube.com/embed/-3a6ZsoHoGc" frameborder="0" allowfullscreen></iframe>
-              </figure>
+              {{ utils.youtubeEmbed(embed) }}
             </div>
 
-            <div class="cell">
-              <a target="_blank" href="/assets/images/games/wesley-smiths-repair-game/screenshot-01.png">
-                <figure class="image is-16by9">
-                  <img class="box p-0" src="/assets/images/games/wesley-smiths-repair-game/screenshot-01.png" alt="Screenshot">
-                </figure>
-              </a>
-            </div>
-    
-            <div class="cell">
-              <a target="_blank" href="/assets/images/games/wesley-smiths-repair-game/screenshot-02.png">
-                <figure class="image is-16by9">
-                  <img class="box p-0" src="/assets/images/games/wesley-smiths-repair-game/screenshot-02.png" alt="Screenshot">
-                </figure>
-              </a>
-            </div>
-    
-            <div class="cell">
-              <a target="_blank" href="/assets/images/games/wesley-smiths-repair-game/screenshot-04.png">
-                <figure class="image is-16by9">
-                  <img class="box p-0" src="/assets/images/games/wesley-smiths-repair-game/screenshot-03.png" alt="Screenshot">
-                </figure>
-              </a>
-            </div>
-    
-            <div class="cell">
-              <a target="_blank" href="/assets/images/games/wesley-smiths-repair-game/screenshot-04.png">
-                <figure class="image is-16by9">
-                  <img class="box p-0" src="/assets/images/games/wesley-smiths-repair-game/screenshot-04.png" alt="Screenshot">
-                </figure>
-              </a>
-            </div>
+            {% for screenshot in screenshots %}
+              <div class="cell">
+                <a target="_blank" href="{{ screenshot }}">
+                  <figure class="image is-16by9">
+                    <img class="box p-0" src="{{ screenshot }}" alt="Screenshot">
+                  </figure>
+                </a>
+              </div>
+            {% endfor %}
           </div>
         </div>
       </div>
@@ -143,7 +117,7 @@ layout: index.html
       <div class="column is-6 is-4-desktop has-text-centered">
         <h2 class="mb-5">Created by</h3>
 
-        <p class="is-lead mb-0"><a href="https://danae.link/">Danae Dekker</a></p>
+        <p class="is-lead mb-0"><a href="{{ team.danae_dekker.links.site }}">Danae Dekker</a></p>
         <p>Dsign &middot; Development &middot; In-game and UI Art &middot; Audio Design</p>
 
         <p class="is-lead mb-0">Wesley van de Wiel</p>
@@ -152,7 +126,7 @@ layout: index.html
         <p class="is-lead mb-0">RosaRosieRose</p>
         <p>Additional Character Animations</p>
 
-        <p class="is-lead mb-0"><a href="https://runicpixels.carrd.co/">Luna "Runic Pixels" van Egdom</a></p>
+        <p class="is-lead mb-0"><a href="{{ team.luna_van_egdom.links.site }}">Luna "Runic Pixels" van Egdom</a></p>
         <p>Additional Environment Art</p>
       </div>
     </div>

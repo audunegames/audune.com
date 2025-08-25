@@ -1,7 +1,17 @@
 ---
-title: Invisible Wings
-layout: index.html
+title: "Invisible Wings: Chapter One"
+layout: base.html
+
+embed: "IbGgyq8-2xk"
+screenshots:
+- "/assets/images/games/invisible-wings/screenshot-01.png"
+- "/assets/images/games/invisible-wings/screenshot-02.png"
+- "/assets/images/games/invisible-wings/screenshot-03.png"
+- "/assets/images/games/invisible-wings/screenshot-04.png"
 ---
+
+{% import "utils.html" as utils %}
+{% set game = games.invisible_wings %}
 
 <div class="invisible-wings">
   <!-- Header -->
@@ -17,70 +27,27 @@ layout: index.html
   <section class="section container content">
     <div class="columns is-centered">
       <div class="column is-12 is-8-desktop">
-        <p class="is-lead has-text-centered">Help Dawn, a young woman of faerie descent, with her first steps into loving and accepting who she is in a modern world where faeries and humans were supposed to live in harmony.</p>
+        <p class="is-lead has-text-centered">
+          Help Dawn, a young woman of faerie descent, with her first steps into loving and accepting who she is in a modern world where faeries and humans were supposed to live in harmony.
+        </p>
 
-        <div class="buttons is-centered is-family-secondary my-5">
-          <a class="button is-primary is-medium" href="https://store.steampowered.com/app/1419380/Invisible_Wings_Chapter_One/">
-            <span class="icon mr-2">
-              <i class="fa-brands fa-steam"></i>
-            </span>
-            Play on Steam
-          </a>
-
-          <a class="button is-primary is-medium" href="https://audune.itch.io/invisiblewings">
-            <span class="icon mr-2">
-              <i class="fa-brands fa-itch-io"></i>
-            </span>
-            Play on Itch.io
-          </a>
-
-          <a class="button is-primary is-medium" href="https://open.spotify.com/album/34l0R4F0FA8WE91f0RuUDV?si=a10cbcfc04e7456a">
-            <span class="icon mr-2">
-              <i class="fa-brands fa-spotify"></i>
-            </span>
-            Soundtrack
-          </a>
-        </div>
+        {{ utils.linkButtons(game.links, containerClasses = "my-5", buttonClasses = "is-medium is-family-secondary") }}
 
         <div class="fixed-grid has-2-cols mt-6">
           <div class="grid">
             <div class="cell is-col-span-2">
-              <figure class="image is-16by9">
-                <iframe class="box p-0 has-ratio" src="https://www.youtube.com/embed/IbGgyq8-2xk" frameborder="0" allowfullscreen></iframe>
-              </figure>
+              {{ utils.youtubeEmbed(embed) }}
             </div>
 
-            <div class="cell">
-              <a target="_blank" href="/assets/images/games/invisible-wings/screenshot-01.png">
-                <figure class="image is-16by9">
-                  <img class="box p-0" src="/assets/images/games/invisible-wings/screenshot-01.png" alt="Screenshot">
-                </figure>
-              </a>
-            </div>
-    
-            <div class="cell">
-              <a target="_blank" href="/assets/images/games/invisible-wings/screenshot-02.png">
-                <figure class="image is-16by9">
-                  <img class="box p-0" src="/assets/images/games/invisible-wings/screenshot-02.png" alt="Screenshot">
-                </figure>
-              </a>
-            </div>
-    
-            <div class="cell">
-              <a target="_blank" href="/assets/images/games/invisible-wings/screenshot-03.png">
-                <figure class="image is-16by9">
-                  <img class="box p-0" src="/assets/images/games/invisible-wings/screenshot-03.png" alt="Screenshot">
-                </figure>
-              </a>
-            </div>
-    
-            <div class="cell">
-              <a target="_blank" href="/assets/images/games/invisible-wings/screenshot-04.png">
-                <figure class="image is-16by9">
-                  <img class="box p-0" src="/assets/images/games/invisible-wings/screenshot-04.png" alt="Screenshot">
-                </figure>
-              </a>
-            </div>
+            {% for screenshot in screenshots %}
+              <div class="cell">
+                <a target="_blank" href="{{ screenshot }}">
+                  <figure class="image is-16by9">
+                    <img class="box p-0" src="{{ screenshot }}" alt="Screenshot">
+                  </figure>
+                </a>
+              </div>
+            {% endfor %}
           </div>
         </div>
       </div>
@@ -190,10 +157,10 @@ layout: index.html
       <div class="column is-6 is-4-desktop has-text-centered">
         <h2 class="mb-5">Created by</h3>
 
-        <p class="is-lead mb-0"><a href="https://danae.link/">Danae Dekker</a></p>
+        <p class="is-lead mb-0"><a href="{{ team.danae_dekker.links.site }}">Danae Dekker</a></p>
         <p>Creative Director &middot; Development &middot; Audio Design</p>
 
-        <p class="is-lead mb-0"><a href="https://linktr.ee/maricu">Maricu Mana</a></p>
+        <p class="is-lead mb-0"><a href="{{ team.maricu_mana.links.site }}">Maricu Mana</a></p>
         <p>Character & Environment Design</p>
 
         <p class="is-lead mb-0">Eva van der Meer</p>
@@ -203,13 +170,13 @@ layout: index.html
       <div class="column is-6 is-4-desktop has-text-centered">
         <h2 class="mb-5">With the voice talents of</h3>
 
-        <p class="is-lead mb-0"><a href="https://leaderlooi.com/">Leader Looi</a></p>
+        <p class="is-lead mb-0"><a href="{{ team.leader_looi.links.site }}">Leader Looi</a></p>
         <p>Dawn &middot; Female Newsreader</p>
 
-        <p class="is-lead mb-0"><a href="https://jessicaspencer.work/">Jessica Spencer</a></p>
+        <p class="is-lead mb-0"><a href="{{ team.jessica_spencer.links.site }}">Jessica Spencer</a></p>
         <p>Lilith &middot; Little Boy</p>
 
-        <p class="is-lead mb-0"><a href="https://katherinetole.com/">Katherine Tole</a></p>
+        <p class="is-lead mb-0"><a href="{{ team.katherine_tole.links.site }}">Katherine Tole</a></p>
         <p>Aranea &middot; Little Girl</p>
 
         <p class="is-lead mb-0">Martijn Weber</p>

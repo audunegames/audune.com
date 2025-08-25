@@ -1,0 +1,80 @@
+---
+site_title: 'Audune Games'
+shortcut_icon: '/assets/images/logo_circle.png'
+
+eleventyComputed:
+  meta:
+    title: '{{ site_title }}'
+    description: 'Audune Games is an independent game studio based in The Netherlands and making immersive games with a bit of fantasy sprinkled on top!'
+    author: 'Audune Games'
+    keywords: 'audune, games, indie, studio, immersive, narrative, fantasy'
+    image: 'https://audune.com/assets/images/logo_circle.png'
+    $og:title: '{{ meta.title }}'
+    $og:description: '{{ meta.description }}'
+    $og:image: '{{ meta.image }}'
+    $og:image:secure_url: '{{ meta.image }}'
+    $og:image:type: 'image/png'
+    $og:image:width: '512'
+    $og:image:height: '512'
+    $og:locale: 'en_US'
+
+  navbar:
+    brand:
+      image: '/assets/images/logo_circle.png'
+      title: 'Audune'
+      url: '/'
+    pages:
+      - {title: 'Games', url: '/games'}
+      - {title: 'Tools', url: '/tools'}
+      - {title: 'About', url: '/about'}
+    icons:
+      - {icon: 'fa-brands fa-steam', url: '{{ links.socials.steam }}'}
+      - {icon: 'fa-brands fa-itch-io', url: '{{ links.socials.itchio }}'}
+      - {icon: 'fa-brands fa-bluesky', url: '{{ links.socials.bluesky }}'}
+      - {icon: 'fa-brands fa-discord', url: '{{ links.socials.discord }}'}
+      - {icon: 'fa-brands fa-youtube', url: '{{ links.socials.youtube }}'}
+      - {icon: 'fa-brands fa-github', url: '{{ links.socials.github }}'}
+---
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- OpenGraph tags -->
+    {% for name, value in meta %}
+      {%- set is_property = name.startsWith("$") -%}
+      {%- set key = "property" if is_property else "name" -%}
+      {%- set name = name.substring(1) if is_property else name -%}
+      <meta {{ key }}="{{ name }}" content="{{ value }}">
+    {% endfor %}
+    
+    <!-- Shortcut icon -->
+    <link rel="shortcut icon" href="{{ shortcut_icon }}">
+    <link rel="icon" type="image/png" href="{{ shortcut_icon }}" sizes="512x512">
+
+    <!-- Title -->
+    <title>{{ (title + " | " + site_title) if title else site_title }}</title>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="/css/index.css">
+
+    <!-- Scripts -->
+    <script src="/js/index.js"></script>
+  </head>
+
+  <body>
+    <!-- Navbar -->
+    {% include "navbar.html" %}
+
+    <!-- Main -->
+    <main id="view" style="min-height: calc(100vh - 102px - var(--bulma-navbar-height));">
+      {{ content | safe }}
+    </main>
+
+    <!-- Footer -->
+    {% include "footer.html" %}
+  </body>
+</html>

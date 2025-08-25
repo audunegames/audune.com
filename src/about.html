@@ -1,0 +1,113 @@
+---
+title: About
+layout: base.html
+---
+
+{% import "utils.html" as utils %}
+
+<!-- Team content -->
+<section class="section container content">
+  <div class="columns is-centered">
+    <div class="column is-12 is-10-desktop">
+      <h2 class="has-text-centered">Team Audune</h2>
+
+      {{ utils.itemGrid(team | values | selecttag("team"), showContent = true, fixedGridClasses = "has-3-cols has-4-cols-tablet", gridClasses = "is-gap-3") }}
+    </div>
+  </div>
+</section>
+
+<!-- Contributors content -->
+<section class="section container content">
+  <div class="columns is-centered">
+    <div class="column is-12 is-10-desktop">
+      <h2 class="has-text-centered">Collaborators</h2>
+
+      {{ utils.itemGrid(team | values | selecttag("collaborator"), showContent = true, fixedGridClasses = "has-3-cols has-4-cols-tablet", gridClasses = "is-gap-3") }}
+    </div>
+  </div>
+</section>
+
+<!-- Contact content -->
+<section class="section container content">
+  <div class="columns is-centered">
+    <div class="column is-12 is-10-desktop">
+      <h2 class="has-text-centered">Contact us</h2>
+
+      <p>
+        If you wish to contact Audune Games, please <a data-mailto="{{ links.infoMail }}">send us an email</a> or reach out to us on any of the listed socials, and we'll answer you as soon as possible! If you have any questions about or need support for one of our games or products, please <a data-mailto="{{ links.supportMail }}">contact support</a>.
+      </p>
+
+      <p>
+        You can also hop by at the <a href="{{ links.socials.discord }}">Audune Community</a>, our public Discord server, where we'll be happy to chat with you or give you support for our games.
+      </p>
+
+      <div class="grid mt-6">
+        <div class="cell is-contact-cell">
+          <a href="{{ links.socials.steam }}">
+            <p class="icon is-contact-icon">
+              <i class="fa-brands fa-steam fa-4x"></i>
+            </p>
+
+            <p class="mb-0">games at</p>
+            <p class="is-lead">Steam</p>
+          </a>
+        </div>
+
+        <div class="cell is-contact-cell">
+          <a href="{{ links.socials.itchio }}">
+            <p class="icon is-contact-icon">
+              <i class="fa-brands fa-itch-io fa-4x" data-fa-transform="shrink-7" data-fa-mask="fa-solid fa-circle"></i>
+            </p>
+
+            <p class="mb-0">games at</p>
+            <p class="is-lead">Itch.io</p>
+          </a>
+        </div>
+
+        <div class="cell is-contact-cell">
+          <a href="{{ links.socials.bluesky }}">
+            <p class="icon is-contact-icon">
+              <i class="fa-brands fa-bluesky fa-4x" data-fa-transform="shrink-8 down-0.25" data-fa-mask="fa-solid fa-circle"></i>
+            </p>
+
+            <p class="mb-0">posts at</p>
+            <p class="is-lead">Bluesky</p>
+          </a>
+        </div>
+
+        <div class="cell is-contact-cell">
+          <a href="{{ links.socials.discord }}">
+            <p class="icon is-contact-icon">
+              <i class="fa-brands fa-discord fa-4x" data-fa-transform="shrink-7" data-fa-mask="fa-solid fa-circle"></i>
+            </p>
+
+            <p class="mb-0">community at</p>
+            <p class="is-lead">Discord</p>
+          </a>
+        </div>
+
+        <div class="cell is-contact-cell">
+          <a href="{{ links.socials.youtube }}">
+            <p class="icon is-contact-icon">
+              <i class="fa-brands fa-youtube fa-4x" data-fa-transform="shrink-7.5" data-fa-mask="fa-solid fa-circle"></i>
+            </p>
+
+            <p class="mb-0">videos at</p>
+            <p class="is-lead">YouTube</p>
+          </a>
+        </div>
+
+        <div class="cell is-contact-cell">
+          <a href="{{ links.socials.github }}">
+            <p class="icon is-contact-icon">
+              <i class="fa-brands fa-github fa-4x"></i>
+            </p>
+
+            <p class="mb-0">code at</p>
+            <p class="is-lead">GitHub</p>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

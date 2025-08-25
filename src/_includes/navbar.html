@@ -1,0 +1,35 @@
+<nav class="navbar is-dark" role="navigation">
+  <div class="container">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="{{ navbar.brand.url }}">
+        <img class="image" src="{{ navbar.brand.image }}">
+        <span class="has-text-weight-bold">{{ navbar.brand.title }}</span>
+      </a>
+
+      <a role="button" class="navbar-burger" data-target="navbar-menu">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+
+    <div id="navbar-menu" class="navbar-menu">
+      <div class="navbar-start">   
+        {% for page in navbar.pages %}         
+          <a class="navbar-item" href="{{ page.url }}">{{ page.title }}</a>
+        {% endfor %}
+      </div>
+
+      <div class="navbar-end">
+        {% for icon in navbar.icons %}
+          <a class="navbar-item px-3" href="{{ icon.url }}">
+            <span class="icon">
+              <i class="{{ icon.icon }} fa-lg"></i>
+            </span>
+          </a>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</nav>

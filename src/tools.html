@@ -1,0 +1,26 @@
+---
+title: Tools
+layout: base.html
+---
+
+{% import "utils.html" as utils %}
+
+<!-- Assets and libraries content -->
+<section class="section container content">
+  <div class="columns is-centered">
+    <div class="column is-12 is-10-desktop">
+      <h2 class="has-text-centered">Assets and libraries</h2>
+
+      {{ utils.itemGrid(tools | values,  showContent = true, fixedGridClasses = "has-2-cols has-3-cols-tablet", gridClasses = "is-gap-3") }}
+
+      <p class="buttons is-justify-content-center">
+        <a class="button is-primary is-medium is-family-secondary" href="{{ links.socials.github }}">
+          <span class="icon is-medium">
+            <i class="fa-brands fa-github"></i>
+          </span>
+          <span>Browse more libraries</span>
+        </a>
+      </p>
+    </div>
+  </div>
+</section>

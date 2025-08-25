@@ -14,7 +14,7 @@ $(function() {
   });
 
   // Resolve the email links
-  $el.find("a[data-mailto]").on('mouseover touchstart', function() {
+  $("a[data-mailto]").on('mouseover touchstart', function() {
     const mailto = atob($(this).attr('data-mailto'));
     $(this).attr('href', `mailto:${mailto}`);
   });

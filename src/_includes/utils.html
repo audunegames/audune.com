@@ -1,0 +1,97 @@
+{% set linkAttributes = {
+  steam: {title: "Play on Steam", icon: "fa-brands fa-steam"},
+  itchio: {title: "Play on Itch.io", icon: "fa-brands fa-itch-io"},
+  spotify: {title: "Soundtrack", icon: "fa-brands fa-spotify"},
+  github: {title: "View code", icon: "fa-brands fa-github"},
+  openupm: {title: "View package", icon: "fa-solid fa-box-open"},
+  jam: {title: "View jam results", icon: "fa-solid fa-trophy"}
+} %}
+
+
+{% macro linkIcons(links, iconClasses = "") %}
+  {% if links %}
+    <p class="mb-0">
+      {% for name, url in links %}
+        {% if linkAttributes[name] !== null %}
+          <a class="icon" href="{{ url }}">
+            <i class="{{ linkAttributes[name].icon }} {{ iconClasses }}"></i>
+          </a>
+        {% endif %}
+      {% endfor %}
+    </p>
+  {% endif %}
+{% endmacro %}
+
+{% macro linkButtons(links, containerClasses = "", buttonClasses = "", iconClasses = "") %}
+  {% if links %}
+    <div class="buttons is-centered {{ containerClasses }}">  
+      {% for name, url in links %}
+        {% if linkAttributes[name] !== null %}
+          <a class="button is-primary {{ buttonClasses }}" href="{{ url }}">
+            <span class="icon mr-2">
+              <i class="{{ linkAttributes[name].icon }} {{ iconClasses }}"></i>
+            </span>
+            <span>{{ linkAttributes[name].title }}</span>
+          </a>
+        {% endif %}
+      {% endfor %}
+    </div>
+  {% endif %}
+{% endmacro %}
+
+
+{% macro itemCell(item, showContent = false, showMainImage = false, cellClasses = "", figureClasses = "") %}
+  {% set url = item.url | resolvelink(item.links) or item.links | values | first %}
+  {% set image = item.mainImage or item.image if showMainImage else item.image or item.mainImage %}
+
+  <div class="cell {{ cellClasses }}">
+    <figure class="image {{ figureClasses }}">
+      <a href="{{ url }}">
+        <img class="box p-0" src="{{ image }}" alt="{{ item.title }}">
+      </a>
+    </figure>
+
+    {% if showContent %}
+      <div class="content mt-4">
+        <div class="is-flex is-justify-content-space-between mb-2">
+          <p class="has-text-weight-bold mb-0">
+            <a href="{{ url }}">{{ item.title }}</a>
+          </p>
+   
+          {{ linkIcons(item.links, iconClasses = "fa-lg") }}
+        </div>
+
+        <p class="has-text-grey">
+          {{ item.description }}
+        </p>
+      </div>
+    {% endif %}
+  </div>
+{% endmacro %}
+
+{% macro itemGrid(items, showContent = false, showMainImage = false, fixedGridClasses = "", gridClasses = "", cellClasses = "", figureClasses = "") %}
+  <div class="fixed-grid {{ fixedGridClasses }}">
+    <div class="grid {{ gridClasses }}">
+      {% for item in items  %}
+        {{ itemCell(item, showContent, showMainImage, cellClasses, figureClasses) }}
+      {% endfor %}
+    </div>
+  </div>
+{% endmacro %}
+
+
+{% macro youtubeEmbed(id, figureClasses = "") %}
+  <figure class="image is-16by9 {{ figureClasses }}">
+    <iframe class="box p-0 has-ratio" src="https://www.youtube.com/embed/{{ id }}" frameborder="0" allowfullscreen></iframe>
+  </figure>
+{% endmacro %}
+
+{% macro youtubeGrid(ids, fixedGridClasses = "", gridClasses = "", figureClasses = "") %}
+  <div class="fixed-grid {{ fixedGridClasses }}">
+    <div class="grid {{ gridClasses }}">
+      {% for id in ids %}
+        {{ youtubeEmbed(id, "cell " + figureClasses) }}
+      {% endfor %}
+    </div>
+  </div>
+{% endmacro %}

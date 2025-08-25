@@ -54,12 +54,12 @@
     transition: 0.1s ease-in-out;
 
     &:active {
-      color: var(--bulma-link-dark);
+      color: var(--bulma-link-bold);
       border-bottom-color: var(--bulma-link-bold);
     }
 
     &:hover {
-      color: var(--bulma-link-dark);
+      color: var(--bulma-link-bold);
       border-bottom-color: var(--bulma-link-bold);
     }
 
@@ -107,6 +107,12 @@
       text-align: center;
     }
   }
+}
+
+
+// Box styling
+.box {
+  box-shadow: none;
 }
 
 
