@@ -9,7 +9,7 @@ layout: base.html
 <section class="section container content">
   <div class="columns is-centered">
     <div class="column is-12 is-10-desktop">
-      <h2 class="has-text-centered">Our games</h2>
+      <h2 class="has-text-centered">Standalone games</h2>
 
       {{ utils.itemGrid(games | values | selecttag("game"),  showContent = true, fixedGridClasses = "has-2-cols has-3-cols-tablet", gridClasses = "is-gap-3") }}
     </div>
