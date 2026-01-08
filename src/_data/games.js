@@ -22,12 +22,23 @@ export default {
       spotify: "https://open.spotify.com/album/34l0R4F0FA8WE91f0RuUDV?si=a10cbcfc04e7456a"
     },
   },
+  oboro: {
+    title: "Oboro: Fading Forest",
+    description: "A turn-based roguelike strategy game where you harvest and craft items in order to hold back the decay of the forest. Made for Dutch Game jam Fall 2025.",
+    mainImage: "/assets/images/games/oboro-main-capsule.png",
+    image: "/assets/images/games/oboro-capsule.png",
+    tags: ["jam", "featured"],
+    links: {
+      itchio: "https://audune.itch.io/oboro",
+      jam: "https://itch.io/jam/dutch-game-jam-fall-2025/rate/3978646"
+    },
+  },
   cmyktd: {
     title: "CMYKTD",
     description: "A pixel art tower defense game where you collect colored orbs to give unique upgrades to your towers. Made for 1-2-3-Scope Game Jam.",
     mainImage: "/assets/images/games/cmyktd-main-capsule.png",
     image: "/assets/images/games/cmyktd-capsule.png",
-    tags: ["jam", "featured"],
+    tags: ["jam"],
     links: {
       itchio: "https://audune.itch.io/cmyktd",
       jam: "https://itch.io/jam/123scope-jam/rate/3508593"
@@ -45,7 +56,7 @@ export default {
   },
   bean_and_brew: {
     title: "Bean and Brew",
-    description: "A delightful stylized game in which speed is the flavor you need to collect and deliver your coffee as fast as possible. Made for Ludum Dare 55.",
+    description: "A delightful stylized game in which speed is the flavor you need to collect to deliver your coffee as fast as possible. Made for Ludum Dare 55.",
     image: "/assets/images/games/bean-and-brew-capsule.png",
     tags: ["jam"],
     links: {
