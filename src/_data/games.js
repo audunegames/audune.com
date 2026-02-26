@@ -22,6 +22,26 @@ export default {
       spotify: "https://open.spotify.com/album/34l0R4F0FA8WE91f0RuUDV?si=a10cbcfc04e7456a"
     },
   },
+  amayas_light: {
+    title: "Amaya's Light",
+    description: "A small dungeon crawling adventure about solving intricate puzzles and battling the nightmares hiding in the dark. Made for Brackeys Game Jam 2026.1.",
+    image: "/assets/images/games/amayas-light-capsule.png",
+    tags: ["jam"],
+    links: {
+      itchio: "https://audune.itch.io/amayas-light",
+      jam: "https://itch.io/jam/brackeys-15/rate/4309616"
+    },
+  },
+  "guardian-of-the-masked-spirits": {
+    title: "Guardian of the Masked Spirits",
+    description: "An exploration game where you are the guardian of the shrine and protector of the spirits that reside there. Made for Global Game Jam 2026.",
+    image: "/assets/images/games/guardian-of-the-masked-spirits-capsule.png",
+    tags: ["jam"],
+    links: {
+      itchio: "https://rumboots.itch.io/guardian-of-the-masked-spirits",
+      jam: "https://itch.io/jam/dtj-ggj-2026/rate/4210496"
+    }
+  },
   oboro: {
     title: "Oboro: Fading Forest",
     description: "A turn-based roguelike strategy game where you harvest and craft items in order to hold back the decay of the forest. Made for Dutch Game jam Fall 2025.",
