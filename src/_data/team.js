@@ -1,7 +1,7 @@
 export default {
   danae_dekker: {
     title: "Danae Dekker",
-    description: "Creative Director · Developer · Audio Designer",
+    description: "Developer · Audio Designer",
     image: "/assets/images/about/avatar-danae-dekker.png",
     tags: ["team"],
     links: {

@@ -5,24 +5,17 @@ layout: base.html
 
 {% import "utils.html" as utils %}
 
-<!-- Team content -->
-<section class="section container content">
-  <div class="columns is-centered">
-    <div class="column is-12 is-10-desktop">
-      <h2 class="has-text-centered">Team Audune</h2>
-
-      {{ utils.itemGrid(team | values | selecttag("team"), showContent = true, fixedGridClasses = "has-3-cols has-4-cols-tablet", gridClasses = "is-gap-3") }}
-    </div>
-  </div>
-</section>
-
-<!-- Contributors content -->
+<!-- Collaborators content -->
 <section class="section container content">
   <div class="columns is-centered">
     <div class="column is-12 is-10-desktop">
       <h2 class="has-text-centered">Collaborators</h2>
 
-      {{ utils.itemGrid(team | values | selecttag("collaborator"), showContent = true, fixedGridClasses = "has-3-cols has-4-cols-tablet", gridClasses = "is-gap-3") }}
+      <p>
+        The following amazing folks have been working on games released by Audune. Go check them out!</p>
+      </p>
+
+      {{ utils.itemGrid(team | values, showContent = true, fixedGridClasses = "has-3-cols has-4-cols-tablet", gridClasses = "is-gap-3") }}
     </div>
   </div>
 </section>
@@ -31,14 +24,14 @@ layout: base.html
 <section class="section container content">
   <div class="columns is-centered">
     <div class="column is-12 is-10-desktop">
-      <h2 class="has-text-centered">Contact us</h2>
+      <h2 class="has-text-centered">Contact me</h2>
 
       <p>
-        If you wish to contact Audune Games, please <a data-mailto="{{ links.infoMail }}">send us an email</a> or reach out to us on any of the listed socials, and we'll answer you as soon as possible! If you have any questions about or need support for one of our games or products, please <a data-mailto="{{ links.supportMail }}">contact support</a>.
+        If you wish to contact me, please <a data-mailto="{{ links.infoMail }}">send me an email</a> or reach out to me on any of the listed socials, and I'll answer you as soon as possible! If you have any questions about or need support for one of Audune's games or products, please <a data-mailto="{{ links.supportMail }}">contact support</a>.
       </p>
 
       <p>
-        You can also hop by at the <a href="{{ links.socials.discord }}">Audune Community</a>, our public Discord server, where we'll be happy to chat with you or give you support for our games.
+        You can also hop by at the <a href="{{ links.socials.discord }}">Audune Community</a>, my public Discord server, where I'll be happy to chat with you or give you support for Audune's games.
       </p>
 
       <div class="grid mt-6">
@@ -61,6 +54,17 @@ layout: base.html
 
             <p class="mb-0">games at</p>
             <p class="is-lead">Itch.io</p>
+          </a>
+        </div>
+
+        <div class="cell is-contact-cell">
+          <a href="{{ links.socials.github }}">
+            <p class="icon is-contact-icon">
+              <i class="fa-brands fa-github fa-4x"></i>
+            </p>
+
+            <p class="mb-0">code at</p>
+            <p class="is-lead">GitHub</p>
           </a>
         </div>
 
@@ -94,17 +98,6 @@ layout: base.html
 
             <p class="mb-0">videos at</p>
             <p class="is-lead">YouTube</p>
-          </a>
-        </div>
-
-        <div class="cell is-contact-cell">
-          <a href="{{ links.socials.github }}">
-            <p class="icon is-contact-icon">
-              <i class="fa-brands fa-github fa-4x"></i>
-            </p>
-
-            <p class="mb-0">code at</p>
-            <p class="is-lead">GitHub</p>
           </a>
         </div>
       </div>

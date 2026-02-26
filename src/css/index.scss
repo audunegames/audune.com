@@ -2,6 +2,16 @@
 @use 'bulma';
 
 
+// Header styling
+.header {
+  // Hero styling
+  &.hero {
+    background-color: var(--bulma-dark);
+    background-size: cover;
+    background-position: center;
+  }
+}
+
 // Navbar styling
 .navbar {
   font-family: var(--bulma-family-secondary);
@@ -21,13 +31,15 @@
   }
 }
 
-// Header styling
-.header {
-  // Hero styling
-  &.hero {
-    background-color: var(--bulma-dark);
-    background-size: cover;
-    background-position: center;
+// Footer styling
+.footer {
+  background-color: var(--bulma-dark);
+  font-size: var(--bulma-size-7);
+  padding: 0;
+
+  // Padding for child elements
+  & > * {
+    padding: var(--bulma-footer-padding);
   }
 }
 
@@ -50,26 +62,16 @@
   a:not(.button) {
     color: var(--bulma-link);
     border-bottom: 1px var(--bulma-link) dotted;
-
     transition: 0.1s ease-in-out;
 
-    &:active {
+    // Hover and active link styling
+    &:hover, &:active {
       color: var(--bulma-link-bold);
       border-bottom-color: var(--bulma-link-bold);
     }
 
-    &:hover {
-      color: var(--bulma-link-bold);
-      border-bottom-color: var(--bulma-link-bold);
-    }
-
-    // Links in the footer have no border
-    .footer > & {
-      border-bottom: none;
-    }
-
-    // Icon links have no border
-    &.icon, &:has(.icon), &:has(.tag) {
+    // Icon links and links with overlay have no border
+    &.icon, &:has(.icon), &:has(.tag), &.is-overlay {
       border-bottom: none;
     }
   }
@@ -115,7 +117,6 @@
   box-shadow: none;
 }
 
-
 // Centered content
 .is-centered {
   margin-left: auto;
@@ -154,6 +155,7 @@
   height: 4rem;
   margin-bottom: 0 !important;
 }
+
 
 // Background image modifier
 .has-background-image {
