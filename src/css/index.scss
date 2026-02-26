@@ -162,28 +162,50 @@
   background-size: cover;
 }
 
+// Top border modifier
+.has-border-top:before, .has-border:before {
+  content: " ";
+  display: block;
+  width: 100%;
+  height: 24px;
+
+  background-image: url('/assets/images/border-top.png');
+  background-position: center;
+}
+
+// Bottom border modifier
+.has-border-bottom:after, .has-border:after {
+  content: " ";
+  display: block;
+  width: 100%;
+  height: 24px;
+
+  background-image: url('/assets/images/border-bottom.png');
+  background-position: center;
+}
+
 
 // Invisible Wings specific styling
 .invisible-wings {
-  // Top hero border modifier
-  .has-hero-border-top:before, .has-hero-border:before {
+  // Top border modifier
+  .has-border-top:before, .has-border:before {
     content: " ";
     display: block;
     width: 100%;
     height: 30px;
 
-    background-image: url('/assets/images/games/invisible-wings/hero-border-top.png');
+    background-image: url('/assets/images/border-top-invisible-wings.png');
     background-position: center;
   }
 
-  // Bottom hero border modifier
-  .has-hero-border-bottom:after, .has-hero-border:after {
+  // Bottom border modifier
+  .has-border-bottom:after, .has-border:after {
     content: " ";
     display: block;
     width: 100%;
     height: 30px;
 
-    background-image: url('/assets/images/games/invisible-wings/hero-border-bottom.png');
+    background-image: url('/assets/images/border-bottom-invisible-wings.png');
     background-position: center;
   }
 }
