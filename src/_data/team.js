@@ -5,7 +5,7 @@ export default {
     image: "/assets/images/about/avatar-danae-dekker.png",
     tags: ["team"],
     links: {
-      site: "https://danae.link/",
+      site: "https://danae.dev/",
     },
   },
   luna_van_egdom: {
