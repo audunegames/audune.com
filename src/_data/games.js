@@ -7,7 +7,7 @@ export default {
     url: "/games/wesley-smiths-repair-game",
     links: {
       steam: "https://store.steampowered.com/app/2480840/Wesley_Smiths_Repair_Game/",
-      itchio: "https://audune.itch.io/repairgame"
+      itchio: "https://audune.itch.io/wesleysmithsrepairgame"
     },
   },
   invisible_wings: {
