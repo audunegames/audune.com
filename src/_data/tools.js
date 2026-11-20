@@ -1,7 +1,15 @@
 export default {
+  audune_pixel_prompts: {
+    title: "Audune Pixel Promps",
+    description: "12x12 pixel art button prompts for keyboard, mouse and modern controllers.",
+    image: "/assets/images/tools/audune-pixel-prompts-capsule.png",
+    links: {
+      itchio: "https://audune.itch.io/audune-pixel-prompts",
+    },
+  },
   audune_prompts: {
     title: "Audune Promps",
-    description: "Free to use button prompts for keyboard, mouse and modern controllers, made with a minimal yet clear design in mind.",
+    description: "64x64 button prompts for keyboard, mouse and modern controllers, made with a minimal yet clear design in mind.",
     image: "/assets/images/tools/audune-prompts-capsule.png",
     links: {
       itchio: "https://audune.itch.io/audune-prompts",
